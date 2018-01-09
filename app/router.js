@@ -7,6 +7,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('linked', { path: '/linked/:link_id' });
 });
 
 export default Router;

@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm"></div>
+    <div class="col-sm">
+        <br/><br/><br/>
+        {{#if showSuccess}}
+            <b>Success!</b>
+            <br/><br/>
+        {{/if}}
+        {{#if isProcessing}}
+            <div style="text-align: center;">
+                <i class="state-processing"></i>
+            </div>
+        {{else}}
+            <form>
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    {{input autocomplete="off" value=amount class="form-control" id="amount" placeholder="Amount" type="number"}}
+                </div>
+                <button type="submit" class="btn btn-primary" {{action "charge"}}>Charge</button>   
+            </form>
+        {{/if}}
+    </div>
+    <div class="col-sm"></div>
+  </div>
+</div>
